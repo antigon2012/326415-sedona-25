@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Денис Сологуб](https://up.htmlacademy.ru/htmlcss/25/user/326415).
-* Наставник:[Егор Глебов].
+* Наставник:[Егор Глебов](https://htmlacademy.ru/profile/beast)
 
 ---
 
