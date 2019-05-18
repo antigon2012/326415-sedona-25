@@ -3,17 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" type="text/css" href="#">
   </head>
   <body>
 
     <header class="main-header">
       <nav class="main-nav">
-      <a><img src="img/logo.svg" width="140" height="71" alt="Логотип Седона">Логотип Седона</a>
-       <ul class="nav-list">
-         <li><a href="info.html">Информация</a></li>
-         <li><a href="media.html">Фото и видео</a></li>
-         <li><a href="map.html">Карта штата</a></li>
-         <li><a href="hotels.html">Гостиницы</a></li>
+      <a aria-label="Логотип City of Sedona"><img src="img/logo.svg" width="140" height="71" alt="Логотип Седона"></a>
+       <ul class="nav-cite">
+         <li class="nav-item"><a href="info.html">Информация</a></li>
+         <li class="nav-item"><a href="media.html">Фото и видео</a></li>
+         <li class="nav-item"><a href="map.html">Карта штата</a></li>
+         <li class="nav-item"><a href="hotels.html">Гостиницы</a></li>
        </ul>
       </nav>
     </header>
@@ -67,7 +68,7 @@
           <li class="features-item">
             <h3 class="features-item-title">Мало туристов</h3>
             <b class="features-number">-№5-</b>
-            <p class="features-text">Большинство едет в Гранд Каньон и тольпится там</p>
+            <p class="features-text">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ul>
       </section>
@@ -79,8 +80,27 @@
 
       <section class="form">
         <h2 class="visually-hidden">Форма поиска гостиницы в Седоне</h2>
-        <a class="#" href="#">Поиск гостиницы в Седоне</a>
-        <!-- Здесь будет форма-->
+        <a class="form-search" href="#">Поиск гостиницы в Седоне</a>
+        <form action="#">
+          <label for="arrival-date">Дата заезда</label>
+          <input  class="arrival-date" id="arrival-date" type="text" name="arrival date" placeholder="24 апреля 2017">
+          <img class="form-management calendar" src="img/calendar.svg" alt="Кнопка выбора даты  заезда">
+          <label for="departure-date">Дата выезда</label>
+          <input class="departure-date" id="departure-date" type="text" name="departure date" placeholder="4 июля 2017">
+          <img class="form-management calendar" src="img/calendar.svg" alt="Кнопка выбора даты отъезда">
+          <label for="adults">Взрослые</label>
+          -
+          <input class="adults" id="adults" type="number" min="1" name="adults">
+          +
+
+          <label for="childs">Дети</label>
+          -
+          <input class="childs" id="childs" type="number" min="1" name="childs">
+          +
+          <!--<output name="child">2</output>-->
+
+          <button class="button button-form-submit" type="submit">Найти</button>
+        </form>
       </section>
 
     </main>
