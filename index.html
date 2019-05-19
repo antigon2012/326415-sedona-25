@@ -84,19 +84,19 @@
         <form action="#">
           <label for="arrival-date">Дата заезда</label>
           <input  class="arrival-date" id="arrival-date" type="text" name="arrival date" placeholder="24 апреля 2017">
-          <img class="form-management calendar" src="img/calendar.svg" alt="Кнопка выбора даты  заезда">
+          <button type="button" class="form-management calendar">Календарь</button>
           <label for="departure-date">Дата выезда</label>
           <input class="departure-date" id="departure-date" type="text" name="departure date" placeholder="4 июля 2017">
-          <img class="form-management calendar" src="img/calendar.svg" alt="Кнопка выбора даты отъезда">
+          <button type="button" class="form-management calendar">Календарь</button>
           <label for="adults">Взрослые</label>
-          -
+          <button class="form-button reduce" type="button">Уменьшить</button>
           <input class="adults" id="adults" type="number" min="1" name="adults">
-          +
+          <button class="form-button increase" type="button">Увеличить</button>
 
           <label for="childs">Дети</label>
-          -
+          <button class="form-button reduce" type="button">Уменьшить</button>
           <input class="childs" id="childs" type="number" min="1" name="childs">
-          +
+          <button class="form-button increase" type="button">Увеличить</button>
           <!--<output name="child">2</output>-->
 
           <button class="button button-form-submit" type="submit">Найти</button>
