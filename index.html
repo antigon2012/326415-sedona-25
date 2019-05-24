@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" type="text/css" href="#">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-
+    <div class="container">
     <header class="main-header">
       <nav class="main-nav">
       <a aria-label="Логотип City of Sedona"><img src="img/logo.svg" width="140" height="71" alt="Логотип Седона"></a>
-       <ul class="nav-cite">
+       <ul class="nav-site">
          <li class="nav-item"><a href="info.html">Информация</a></li>
          <li class="nav-item"><a href="media.html">Фото и видео</a></li>
          <li class="nav-item"><a href="map.html">Карта штата</a></li>
@@ -33,7 +35,7 @@
         <ul class="features-list">
           <li class="features-item">
             <h3 class="features-item-title">Настоящий городок</h3>
-            <b class="features-number">-№1-</b>
+            <b class="features-number">- №1 -</b>
             <p class="features-text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
             <ul class="features-subitem-list">
               <li class="features-subitem">
@@ -53,7 +55,7 @@
           <li class="features-item">
             <h3 class="features-item-title">Там есть мост дьявола</h3>
             <b class="features-number">-№2-</b>
-            <p class="features-text">Да, по нему можно проити! Если конечно вы осмелитесь</p>
+            <p class="features-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </li>
           <li class="features-item">
             <h3 class="features-item-title">Небольшая площадь</h3>
@@ -80,7 +82,8 @@
 
       <section class="form">
         <h2 class="visually-hidden">Форма поиска гостиницы в Седоне</h2>
-        <a class="form-search" href="#">Поиск гостиницы в Седоне</a>
+        <button class="button form-search" type="button">Поиск гостиницы в Седоне</button>
+        <div class="form-wrapper">
         <form action="#">
           <label for="arrival-date">Дата заезда</label>
           <input  class="arrival-date" id="arrival-date" type="text" name="arrival date" placeholder="24 апреля 2017">
@@ -100,9 +103,13 @@
           <!--<output name="child">2</output>-->
 
           <button class="button button-form-submit" type="submit">Найти</button>
-        </form>
-      </section>
 
+        </form>
+        </div>
+      </section>
+      <section clas="map">
+        <h2 class="visually-hidden">Как к нам проехать</h2>
+      </section>
     </main>
 
     <footer class="main-footer">
@@ -123,6 +130,6 @@
       </p>
 
     </footer>
-
+    </div>
   </body>
 </html>
