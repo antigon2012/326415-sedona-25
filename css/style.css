@@ -16,11 +16,13 @@ body {
   position: relative;
   width: 1200px;
   margin: 0 auto;
+  padding: 0;
   background-color: #ffffff;
   box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
-  background-image: url("../img/bg-photo.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  background-image: url("../img/bg-photo.jpg"),
+                    url("../img/map.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top center, bottom center;
 }
 
 .visually-hidden {
@@ -55,6 +57,7 @@ a {
 .main-nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
   background-color: #ffffff;
 }
@@ -94,16 +97,13 @@ a {
   margin: 76px auto 79px;
 }
 
-
 .main-content-index::before {
   content: "";
   display: block;
   position: absolute;
-  width: 1201px;
+  width: 100%;
   height: 59px;
   background-image: url("../img/polygon.png");
-  background-size: 1201px;
-  background-size: cover;
   top: 506px;
 }
 
@@ -137,14 +137,37 @@ a {
   background-color: #f2f2f2;
 }
 
-.features ul {
+.features-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
+.features-subitem-list {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #ffffff;
+}
+
+.features-subitem,
 .features-item {
   text-align: center;
+  box-sizing: border-box;
   background-color: #eeeeee;
+  width: 400px;
+  min-height: 256px;
+  padding: 46px 60px 56px;
+}
+
+.features-subitem {
+  padding-top: 164px;
+  min-height: 330px;
 }
 
 .features-item:first-of-type,
@@ -153,34 +176,25 @@ a {
   color: #ffffff;
 }
 
+.features-item:first-of-type {
+  order: -2;
+}
+
+.features-item:last-of-type {
+  order: -1;
+  width: 1200px;
+  padding: 0;
+}
+
 .features-item-title {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
+  margin-top: 0;
 }
 
 .features-number {
   font: inherit;
-}
-/*
-.features-item:first-of-type::after {
-  content: "";
-  background-image: url(../img/feature-picture.jpg);
-  background-size: cover 800px 256px;
-}
-
-.features-item:nth-of-type(2)::before {
-  content: "";
-  background-image: url("../img/feature-picture-2.jpg");
-  background-size: cover 800px 256px;
-}*/
-
-.features-subitem-list {
-  background-color: #ffffff;
-}
-
-.features-subitem {
-  text-align: center;
 }
 
 .features-subitem-title {
@@ -188,10 +202,37 @@ a {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
+  margin-top: 0;
 }
 
 .features-subitem-text {
   color: #333333;
+}
+
+.features-item:first-of-type::after {
+  content: "";
+  display: block;
+  width: 800px;
+  height: 256px;
+  background-image: url("../img/feature-picture.jpg");
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.features-item:nth-of-type(2) {
+  margin-left: 800px;
+}
+
+.features-item:nth-of-type(2)::before {
+  content: "";
+  display: block;
+  width: 800px;
+  height: 256px;
+  background-image: url("../img/feature-picture-2.jpg");
+  position: absolute;
+  left: 0;
+  top: 586px;
 }
 
 .epilogue {
@@ -207,6 +248,7 @@ a {
   font-weight: 700;
 }
 
+/*Стилизация формы на главной странице*/
 
 .form {
   background-image: url("../img/map.jpg");
@@ -347,7 +389,19 @@ a {
   list-style: none;
   padding: 0;
   text-align: center;
-  vertical-align: middle;
+  display: flex;
+  width: 158px;
+  height: 48px;
+}
+
+.social-list li {
+  width: 48px;
+  height: 48px;
+  margin-right: 6px;
+}
+
+.social-list li: last-of-type {
+  margin-right: 0;
 }
 
 .hashtag {
@@ -366,7 +420,6 @@ a {
 /*Стили внутренней страницы*/
 
 
-
 .hotels-form {
   background-image: url("../img/filter-background.jpg");
   background-position: top center;
@@ -383,14 +436,38 @@ a {
   background-color: #ffffff;
 }
 
+/*Стилизация карточки товара*/
+
 .hotels-item {
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid #e5e5e5;
-  padding: 30px;
   padding-left: 72px;
 }
 
 .hotels-item:first-of-type {
   border-top: 1px solid #e5e5e5;
+}
+
+.hotels-item img:first-child {
+  margin-right: 30px;
+}
+
+.card-column-left {
+  margin-right: auto;
+}
+
+.card-column-right {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  margin-right: 73px;
+}
+
+.rating {
+  color: #666666;
+  background-color: #f2f2f2;
+  padding: 2px 13px 3px 16px ;
 }
 
 
@@ -448,9 +525,4 @@ a {
   background-color: #503e33;
 }
 
-.rating {
-  color: #666666;
-  background-color: #f2f2f2;
-  text-align: right;
-}
 
