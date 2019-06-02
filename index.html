@@ -9,25 +9,27 @@
   </head>
   <body>
     <div class="container">
-    <header class="main-header">
-      <nav class="main-nav">
-      <a aria-label="Логотип City of Sedona"><img src="img/logo.svg" width="140" height="71" alt="Логотип Седона"></a>
-       <ul class="nav-site">
-         <li class="nav-item"><a href="info.html">Информация</a></li>
-         <li class="nav-item"><a href="media.html">Фото и видео</a></li>
-         <li class="nav-item"><a href="map.html">Карта штата</a></li>
-         <li class="nav-item"><a href="hotels.html">Гостиницы</a></li>
-       </ul>
-      </nav>
-    </header>
+      <header class="main-header header-index">
+        <nav class="main-nav">
+        <a class="logo-container" aria-label="Логотип City of Sedona"><img src="img/logo.svg" width="140" height="71" alt="Логотип Седона"></a>
+         <ul class="nav-site">
+           <li class="nav-item"><a href="info.html">Информация</a></li>
+           <li class="nav-item"><a href="media.html">Фото и видео</a></li>
+           <li class="nav-item"><a href="map.html">Карта штата</a></li>
+           <li class="nav-item"><a href="hotels.html">Гостиницы</a></li>
+         </ul>
+        </nav>
+      </header>
 
-    <main class="main-content">
+    <main class="main-content main-content-index">
 
       <h1 class="visually-hidden">Главная страница сайта Sedona</h1>
 
       <section class="introduction">
-        <b>Седона — небольшой городок в Аризоне,заслуживающий большего!</b>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+       <div class="center-container">
+          <b>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</b>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        </div>
       </section>
 
       <section class="features">
@@ -76,35 +78,49 @@
       </section>
 
       <section class="epilogue">
-        <b>Заинтересовались?</b>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+       <div class="center-container">
+          <b>Заинтересовались?</b>
+          <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <button class="button form-search" type="button">Поиск гостиницы в Седоне</button>
+      </div>
       </section>
 
       <section class="form">
         <h2 class="visually-hidden">Форма поиска гостиницы в Седоне</h2>
-        <button class="button form-search" type="button">Поиск гостиницы в Седоне</button>
-        <div class="form-wrapper">
-          <form action="#">
-            <label for="arrival-date">Дата заезда</label>
-            <input  class="arrival-date" id="arrival-date" type="text" name="arrival date" placeholder="24 апреля 2017">
-            <button type="button" class="form-management calendar">Календарь</button>
-            <label for="departure-date">Дата выезда</label>
-            <input class="departure-date" id="departure-date" type="text" name="departure date" placeholder="4 июля 2017">
-            <button type="button" class="form-management calendar">Календарь</button>
-            <label for="adults">Взрослые</label>
-            <button class="form-button reduce" type="button">Уменьшить</button>
-            <input class="adults" id="adults" type="number" min="1" name="adults">
-            <button class="form-button increase" type="button">Увеличить</button>
-            <label for="childs">Дети</label>
-            <button class="form-button reduce" type="button">Уменьшить</button>
-            <input class="childs" id="childs" type="number" min="1" name="childs">
-            <button class="form-button increase" type="button">Увеличить</button>
-            <!--<output name="child">2</output>-->
-            <button class="button button-form-submit" type="submit">Найти</button>
-          </form>
+          <div class="form-container">
+            <form action="#" method="post">
+              <div class="input-wrap">
+                <label for="arrival-date">Дата заезда:</label>
+                <input  class="date" id="arrival-date" type="text" name="arrival date" placeholder="24 апреля 2017">
+                <button type="button" class="calendar">Календарь</button>
+              </div>
+              <div class="input-wrap">
+                <label for="departure-date">Дата выезда:</label>
+                <input class="date" id="departure-date" type="text" name="departure date" placeholder="4 июля 2017">
+                <button type="button" class="calendar">Календарь</button>
+              </div>
+              <div class="form-button-wrap">
+              <label for="adults">Взрослые</label>
+              <div class="button-block">
+                <button class="form-button reduce" type="button">-</button>
+                <input class="adults" id="adults" type="number" min="1" name="adults">
+                <button class="form-button increase" type="button">+</button>
+              </div>
+              </div>
+              <div form-button-wrap>
+              <label for="childs">Дети</label>
+              <div class="button-block">
+                <button class="form-button reduce" type="button">-</button>
+                <input class="childs" id="childs" type="number" min="1" name="childs">
+                <button class="form-button increase" type="button">+</button>
+              </div>
+              </div>
+              <button class="button button-form-submit" type="submit">Найти</button>
+            </form>
         </div>
       </section>
-      <section clas="map">
+
+      <section class="map">
         <h2 class="visually-hidden">Как к нам проехать</h2>
       </section>
     </main>
@@ -116,9 +132,9 @@
       </p>
 
       <ul class="social-list">
-        <li><a href="#">Твиттер</a></li>
-        <li><a href="#">Фейсбук</a></li>
-        <li><a href="#">Ютьюб</a></li>
+        <li class="tw"><a href="#">Твиттер</a></li>
+        <li><a class="vk" href="#">Фейсбук</a></li>
+        <li><a class="ytb" href="#">Ютьюб</a></li>
       </ul>
 
       <p class="creator">

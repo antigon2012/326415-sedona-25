@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="container inner-page">
 
   <header class="main-header">
       <nav class="main-nav">
@@ -16,7 +17,7 @@
          <li class="nav-item"><a href="info.html">Информация</a></li>
          <li class="nav-item"><a href="media.html">Фото и видео</a></li>
          <li class="nav-item"><a href="map.html">Карта штата</a></li>
-         <li class="nav-current"><a>Гостиницы</a></li>
+         <li class="nav-item nav-current"><a>Гостиницы</a></li>
        </ul>
       </nav>
   </header>
@@ -34,6 +35,7 @@
         <ul class="hotels-list">
 
           <li class="hotels-item">
+           <img src="img/hotel-picture-1.jpg" width="135" height="90" alt="Фото Amara Resort & Spa">
             <a class="hotels-title" href="#"><h3>Amara Resort &amp; Spa</h3></a>
             <table class="type-of-housing">
               <tr>
@@ -41,7 +43,6 @@
               <td> от 4000 р.</td>
               </tr>
             </table>
-            <img src="img/hotel-picture-1.jpg" width="135" height="90" alt="Фото Amara Resort & Spa">
             <a href="#" class="detailed">Подробнее</a>
             <a href="#" class="booking">Забронировать</a>
             <p class="rating">Рейтинг: 8,5</p>
@@ -49,6 +50,7 @@
           </li>
 
           <li class="hotels-item">
+           <img src="img/hotel-picture-2.jpg" width="135" height="90" alt="Фото Desert Quail Inn">
             <a class="hotels-title" href="#"><h3>Desert Quail Inn</h3></a>
             <table class="type-of-housing">
               <tr>
@@ -56,7 +58,7 @@
               <td> от 3000 р.</td>
               </tr>
             </table>
-            <img src="img/hotel-picture-2.jpg" width="135" height="90" alt="Фото Desert Quail Inn">
+
             <a href="#" class="detailed">Подробнее</a>
             <a href="#" class="booking">Забронировать</a>
             <p class="rating">Рейтинг: 8,9</p>
@@ -64,18 +66,23 @@
           </li>
 
           <li class="hotels-item">
-            <a class="hotels-title" href="#"><h3>Villas at poco diablo</h3></a>
-            <table class="type-of-housing">
-              <tr>
-              <td>Апартаменты</td>
-              <td> от 2000 р.</td>
-              </tr>
-            </table>
             <img src="img/hotel-picture-3.jpg" width="135" height="90" alt="Фото Villas at poco diablo">
-            <a href="#" class="detailed ">Подробнее</a>
-            <a href="#" class="booking">Забронировать</a>
-            <p class="rating">Рейтинг: 9,2</p>
-            <img class="stars" src="img/star.svg" alt="Количество звезд">
+            <div class="card-column-left">
+              <a class="hotels-title" href="#"><h3>Villas at poco diablo</h3></a>
+              <table class="type-of-housing">
+                <tr>
+                <td>Апартаменты</td>
+                <td> от 2000 р.</td>
+                </tr>
+              </table>
+
+              <a href="#" class="detailed ">Подробнее</a>
+              <a href="#" class="booking">Забронировать</a>
+            </div>
+            <div class="card-column-right">
+              <p class="rating">Рейтинг: 9,2</p>
+              <img class="stars" src="img/star.svg" alt="Количество звезд">
+            </div>
           </li>
 
         </ul>
@@ -102,6 +109,6 @@
       </p>
 
   </footer>
-
+  </div>
 </body>
 </html>
