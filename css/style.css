@@ -40,6 +40,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .main-header {
   font-size: 14px;
   line-height: 26px;
@@ -86,7 +91,7 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.header-index::after {
+.main-content-index::before {
   content: "";
   display: block;
   width: 459px;
@@ -97,7 +102,7 @@ a {
   margin: 76px auto 79px;
 }
 
-.main-content-index::before {
+.introduction::before {
   content: "";
   display: block;
   position: absolute;
@@ -133,6 +138,8 @@ a {
   margin-bottom: 52px;
 }
 
+/*Список особенностей*/
+
 .features {
   background-color: #f2f2f2;
 }
@@ -162,12 +169,7 @@ a {
   background-color: #eeeeee;
   width: 400px;
   min-height: 256px;
-  padding: 46px 60px 56px;
-}
-
-.features-subitem {
-  padding-top: 164px;
-  min-height: 330px;
+  padding: 46px 60px 60px;
 }
 
 .features-item:first-of-type,
@@ -190,11 +192,22 @@ a {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
-  margin-top: 0;
+  margin: 0;
+  margin-bottom: 24px;
 }
 
 .features-number {
   font: inherit;
+}
+
+.features-text {
+  margin: 0;
+  margin-top: 21px;
+}
+
+.features-subitem {
+  padding-top: 160px;
+  min-height: 330px;
 }
 
 .features-subitem-title {
@@ -202,11 +215,13 @@ a {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
-  margin-top: 0;
+  margin: 0;
+  margin-bottom: 24px;
 }
 
 .features-subitem-text {
   color: #333333;
+  margin: 0;
 }
 
 .features-item:first-of-type::after {
@@ -246,24 +261,7 @@ a {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-}
-
-/*Стилизация формы на главной странице*/
-
-.form {
-  background-image: url("../img/map.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 1200px;
-}
-
-.form-container {
-  position: relative;
-  width: 458px;
-  padding: 55px;
   margin: 0 auto;
-  color: #000000;
-  background-color: #ffffff;
 }
 
 .button {
@@ -284,17 +282,62 @@ a {
   margin: 0 auto;
 }
 
+.form-search:focus,
+.form-search:hover {
+  background-color: #604e43;
+}
+
+.form-search:active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/*Форма на главной странице*/
+
+.form {
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 1200px;
+}
+
+.form-container {
+  position: relative;
+  width: 458px;
+  padding: 55px;
+  margin: 0 auto;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.form form {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.date-wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
 .form input {
   box-sizing: border-box;
   margin-bottom: 29px;
+  margin-left: auto;
   padding: 13px;
-  width: 346px;
-  height: 38px;
   border: none;
   background-color: #f2f2f2;
   font: inherit;
+
 }
 
+.date {
+  width: 346px;
+  height: 38px;
+  padding-right: 43px;
+}
 
 .calendar {
   position: absolute;
@@ -309,29 +352,47 @@ a {
   border: none;
 }
 
-.input-wrap:first-of-type .calendar {
+.date-wrap:first-of-type .calendar {
   top: 63px;
   right: 64px;
 }
 
-.input-wrap:nth-of-type(2) .calendar {
+.date-wrap:nth-of-type(2) .calendar {
   top: 130px;
   right: 64px;
 }
 
-.input-wrap {
+.form-button-wrap {
   display: flex;
   align-items: baseline;
-  width: 458px;
+  justify-content: space-around;
+  margin-bottom: 29px;
 }
 
-.date {
-  margin-left: auto;
+.form-button-wrap:first-of-type {
+  margin-right: 53px;
 }
 
+.adults {
+  width: 226px;
+}
 
-.reduce,
-.increase {
+.childs {
+  width: 179px;
+}
+
+.number {
+  width: 38px;
+  height: 38px;
+}
+
+.button-block {
+  display: flex;
+  width: 114px;
+  height: 38px;
+}
+
+.form-button {
   width: 38px;
   height: 38px;
   vertical-align: middle;
@@ -341,29 +402,12 @@ a {
   background-color: #f2f2f2;
 }
 
-
-.button-block {
-  display: flex;
-  width: 114px;
-  padding-top,
-  padding-bottom: 16px;
-}
-
 .button-form-submit {
   width: 458px;
   height: 58px;
   background-color: #81b3d2;
 }
 
-.form-search:focus,
-.form-search:hover {
-  background-color: #604e43;
-}
-
-.form-search:active {
-  background-color: #503e33;
-  color: rgba(255, 255, 255, 0.3);
-}
 
 .button-form-submit:focus,
 .button-form-submit:hover {
@@ -375,20 +419,20 @@ a {
   background-color: #5496bd;
 }
 
+/*Футер*/
+
 .main-footer {
   color: #000000;
   background-color: #ffffff;
   opacity: 0.9;
-  vertical-align: middle;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 36px;
 }
 
 .social-list {
   list-style: none;
-  padding: 0;
-  text-align: center;
   display: flex;
   width: 158px;
   height: 48px;
@@ -398,6 +442,7 @@ a {
   width: 48px;
   height: 48px;
   margin-right: 6px;
+  background-color: #81b3d2;
 }
 
 .social-list li: last-of-type {
@@ -409,13 +454,28 @@ a {
   line-height: 26px;
 }
 
-.creator {
-  text-align: right;
+.creator a {
+  color: inherit;
 }
 
-.main-footer ul {
-  display: flex;
+.tw {
+  background-image: url("../img/tw-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+.fb {
+  background-image: url("../img/fb-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ytb {
+  background-image: url("../img/youtube-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 
 /*Стили внутренней страницы*/
 
