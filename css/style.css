@@ -20,7 +20,7 @@ body {
   background-color: #81b3d2;
   box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
   background-image: url("../img/bg-photo.jpg");
-  background-position: top center;
+  background-position: 0 -27px;
   background-repeat: no-repeat;
 }
 
@@ -119,8 +119,9 @@ img {
   width: 1200px;
   height: 59px;
   background-image: url("../img/polygon.png");
-  background-size: 1200px 59px;
+  background-size: 1202px 60px;
   top: 506px;
+  background-position: center bottom;
 }
 
 
@@ -156,6 +157,7 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
+  background-color: #eeeeee;
 }
 
 .features-subitem-list {
@@ -171,10 +173,9 @@ img {
 .features-item {
   text-align: center;
   box-sizing: border-box;
-  background-color: #eeeeee;
   width: 400px;
   min-height: 256px;
-  padding: 46px 60px 60px;
+  padding: 46px 49px 60px;
 }
 
 .features-item:first-of-type,
@@ -211,6 +212,7 @@ img {
 }
 
 .features-subitem {
+  padding: 50px;
   padding-top: 160px;
   min-height: 330px;
   position: relative;
@@ -238,7 +240,7 @@ img {
   height: 72px;
   background-image: url("../img/icon-1.svg");
   background-size: 75px 72px;
-  top: 60px;
+  top: 59px;
   left: 162px;
 }
 
@@ -251,7 +253,7 @@ img {
   background-image: url("../img/icon-3.svg");
   background-size: 74px 70px;
   top: 60px;
-  left: 162px;
+  left: 163px;
 }
 
 .features-subitem:last-of-type .features-subitem-title::before {
@@ -262,8 +264,8 @@ img {
   height: 76px;
   background-image: url("../img/icon-2.svg");
   background-size: 64px 76px;
-  top: 60px;
-  left: 162px;
+  top: 55px;
+  left: 168px;
 }
 
 .features-item:first-of-type::after {
@@ -345,6 +347,7 @@ img {
 .form {
   position: absolute;
   left: 316px;
+  z-index: 1;
 }
 
 .form-container {
@@ -544,6 +547,8 @@ img {
 }
 
 .map {
+  position: relative;
+  width: 1200px;
   min-height: 474px;
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
@@ -554,6 +559,11 @@ img {
 /*Футер*/
 
 .main-footer {
+  background-image: url("../img/map.jpg");
+  background-position: 0 -473px;
+}
+
+.footer-wrap {
   color: #000000;
   background-color: #ffffff;
   opacity: 0.9;
