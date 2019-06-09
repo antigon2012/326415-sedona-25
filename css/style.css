@@ -558,12 +558,12 @@ img {
 
 /*Футер*/
 
-.main-footer {
+ .footer-wrap-index {
   background-image: url("../img/map.jpg");
   background-position: 0 -473px;
 }
 
-.footer-wrap {
+.main-footer {
   color: #000000;
   background-color: #ffffff;
   opacity: 0.9;
@@ -657,6 +657,19 @@ img {
 
 /*Стили внутренней страницы*/
 
+.inner-page {
+  background-image: none;
+  background-color: #ffffff;
+}
+
+.nav-current a {
+  color: #766357;
+}
+
+.nav-current a:hover,
+.nav-current a:focus {
+  color: #766357;
+}
 
 .hotels-form {
   background-image: url("../img/filter-background.jpg");
@@ -664,13 +677,10 @@ img {
   background-size: 1200px;
 }
 
-.nav-current a {
-  color: #766357;
-}
-
 .hotels-list {
   list-style: none;
   padding: 0;
+  margin: 0;
   background-color: #ffffff;
 }
 
@@ -678,41 +688,29 @@ img {
 
 .hotels-item {
   display: flex;
-  align-items: center;
   border-bottom: 1px solid #e5e5e5;
-  padding-left: 72px;
+  padding: 31px 72px;
 }
 
 .hotels-item:first-of-type {
   border-top: 1px solid #e5e5e5;
 }
 
-.hotels-item img:first-child {
+.hotels-item img {
   margin-right: 30px;
 }
 
 .card-column-left {
+  height: 90px;
   margin-right: auto;
-}
-
-.card-column-right {
   display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-end;
-  margin-right: 73px;
+  flex-direction: column;
 }
-
-.rating {
-  color: #666666;
-  background-color: #f2f2f2;
-  padding: 2px 13px 3px 16px ;
-}
-
 
 .hotels-title {
   color: #000000;
   font-size: 21px;
-  line-height: 26px;
+  line-height: 21px;
   background-color: #ffffff;
 }
 
@@ -725,12 +723,25 @@ img {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.detailed,
-.booking {
+.hotels-title h3 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.type-of-housing td {
+  padding: 0;
+  padding-bottom: 12px
+}
+
+
+.button-card {
   color: #ffffff;
+  font-size: 14px;
+  line-height: 21px;
   font-weight: 700;
   text-align: center;
-  vertical-align: middle;
+  margin: 0;
+  padding: 3.5px 16px;
 }
 
 .detailed {
@@ -763,4 +774,56 @@ img {
   background-color: #503e33;
 }
 
+/*Рейтнг*/
+
+.card-column-right {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+
+.stars {
+  display: flex;
+  width: 110px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 47px;
+  list-style: none;
+}
+
+.stars li {
+  width: 18px;
+  height: 17px;
+  margin-right: 5px;
+}
+
+.stars li:last-child {
+  margin-right: 0;
+}
+
+.star-button {
+  width: 18px;
+  height: 17px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.active-star:last-child {
+  margin-right: 0;
+}
+
+.active-star {
+  background-image: url("../img/star.svg");
+}
+
+.rating {
+  color: #666666;
+  background-color: #f2f2f2;
+  padding: 2px 13px 3px 16px;
+  margin: 0;
+}
 
