@@ -27,32 +27,29 @@
       <section class="hotels-form">
         <h2 class="visually-hidden">Форма выбора гостиниц</h2>
           <form action="#" method="post">
-            <fieldset>
-             <legend>Инфраструктура:</legend>
-              <label for="">Бассейн</label>
-              <input type="radio">
-              <label for="">Парковка</label>
-              <input type="radio">
-              <label for="">Wi-Fi</label>
-              <input type="radio">
+            <fieldset class="form-infrastructure">
+             <legend class="filter-title">Инфраструктура:</legend>
+              <input id="pool" type="checkbox" name="pool" checked>
+              <label class="pool" for="pool">Бассейн</label>
+              <input id="parking" type="checkbox" name="parking">
+              <label class="parking" for="parking">Парковка</label>
+              <input id="radio" type="checkbox" name="Wi-Fi">
+              <label class="radio" for="radio">Wi-Fi</label>
             </fieldset>
-            <fieldset>
-              <legend>Тип жилья:</legend>
-              <label for="">Гостиница</label>
-              <input type="radio">
-              <label for="">Мотель</label>
-              <input type="radio">
-              <label for="">Апартаменты</label>
-              <input type="radio">
+            <fieldset class="form-type">
+              <legend class="filter-title">Тип жилья:</legend>
+              <input id="hotels" type="checkbox" name="hotels" checked>
+              <label  class="hotels" for="hotels">Гостиница</label>
+              <input id="motel" type="checkbox" name="motel" checked>
+              <label class="motel" for="motel">Мотель</label>
+              <input id="apartment" type="checkbox" name="apartment" checked>
+              <label class="apartment" for="apartment">Апартаменты</label>
             </fieldset>
-            <fieldset class="filter-range">
-
-                <legend class="filter-range-title">Стоимость в сутки (р):</legend>
+            <fieldset class="form-filter-range">
+                <legend class="filter-title">Стоимость в сутки (р):</legend>
                 <div class="price-controls">
-                  <label class="min-price" for="min-price">от </label>
-                  <input id="min-price" type="text" name="min-price" value="0">
-                  <label class="max-price" for="max-price ">до </label>
-                  <input id="max-price" type="text" name="max-price" value="3000">
+                  <label class="min-price" for="min-price">от <input id="min-price" type="text" name="min-price" value="0"></label>
+                  <label class="max-price" for="max-price">до <input id="max-price" type="text" name="max-price" value="3000"></label>
                 </div>
                 <div class="range-controls">
                   <div class="scale">
@@ -62,7 +59,6 @@
                   <div class="range-toggle range-toggle-max"></div>
                 </div>
                 <button class="btn-transparent" type="submit">Показать</button>
-
             </fieldset>
           </form>
       </section>
@@ -72,13 +68,15 @@
         <h3>Найдено: 3</h3>
         <div class="sorting-options">
           <p>Сортировка:</p>
-          <button class="sorting-options-price">По цене</button>
-          <button class="sorting-options-type">По типу</button>
-          <button class="sorting-options-rating">По рейтингу</button>
+          <div class="sorting-button-wrap">
+            <button class="sorting-button sorting-button-current">По цене</button>
+            <button class="sorting-button">По типу</button>
+            <button class="sorting-button">По рейтингу</button>
+          </div>
         </div>
         <div class="sort-order">
-          <button class="sort-order sort-order-ascend"><span class="visually-hidden">Сортировать по возрастанию</span></button>
-          <button class="sort-order sort-order-descend"><span class="visually-hidden">Сортировать по убыванию</span></button>
+          <button class="sort-order-button sort-order-ascend"><span class="visually-hidden">Сортировать по возрастанию</span></button>
+          <button class="sort-order-button sort-order-descend"><span class="visually-hidden">Сортировать по убыванию</span></button>
         </div>
       </section>
 
@@ -89,7 +87,7 @@
           <li class="hotels-item">
             <img src="img/hotel-picture-1.jpg" width="135" height="90" alt="Фото Amara Resort & Spa">
             <div class="card-column-left">
-              <a class="hotels-title" href="#"><h3>Amara Resort &amp; Spa</h3></a>
+              <h3  class="hotels-title"><a href="#">Amara Resort &amp; Spa</a></h3>
               <table class="type-of-housing">
                 <tr>
                   <td>Гостиница</td>
@@ -116,7 +114,7 @@
           <li class="hotels-item">
            <img src="img/hotel-picture-2.jpg" width="135" height="90" alt="Фото Desert Quail Inn">
            <div class="card-column-left">
-            <a class="hotels-title" href="#"><h3>Desert Quail Inn</h3></a>
+            <h3 class="hotels-title"><a href="#">Desert Quail Inn</a></h3>
               <table class="type-of-housing">
                 <tr>
                   <td>Мотель</td>
@@ -143,7 +141,7 @@
           <li class="hotels-item">
             <img src="img/hotel-picture-3.jpg" width="135" height="90" alt="Фото Villas at poco diablo">
             <div class="card-column-left">
-              <a class="hotels-title" href="#"><h3>Villas at poco diablo</h3></a>
+              <h3 class="hotels-title"><a href="#">Villas at poco diablo</a></h3>
               <table class="type-of-housing">
                 <tr>
                   <td>Апартаменты</td>
