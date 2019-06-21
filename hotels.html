@@ -29,27 +29,29 @@
           <form action="#" method="post">
             <fieldset class="form-infrastructure">
              <legend class="filter-title">Инфраструктура:</legend>
-              <input id="pool" type="checkbox" name="pool" checked>
+              <input class="visually-hidden" id="pool" type="checkbox" name="pool" checked>
               <label class="pool" for="pool">Бассейн</label>
-              <input id="parking" type="checkbox" name="parking">
+              <input class="visually-hidden" id="parking" type="checkbox" name="parking">
               <label class="parking" for="parking">Парковка</label>
-              <input id="radio" type="checkbox" name="Wi-Fi">
+              <input class="visually-hidden" id="radio" type="checkbox" name="Wi-Fi">
               <label class="radio" for="radio">Wi-Fi</label>
             </fieldset>
             <fieldset class="form-type">
               <legend class="filter-title">Тип жилья:</legend>
-              <input id="hotels" type="checkbox" name="hotels" checked>
-              <label  class="hotels" for="hotels">Гостиница</label>
-              <input id="motel" type="checkbox" name="motel" checked>
+              <input class="visually-hidden" id="hotels" type="checkbox" name="hotels" checked>
+              <label class="hotels" for="hotels">Гостиница</label>
+              <input class="visually-hidden" id="motel" type="checkbox" name="motel" checked>
               <label class="motel" for="motel">Мотель</label>
-              <input id="apartment" type="checkbox" name="apartment" checked>
+              <input class="visually-hidden" id="apartment" type="checkbox" name="apartment" checked>
               <label class="apartment" for="apartment">Апартаменты</label>
             </fieldset>
             <fieldset class="form-filter-range">
                 <legend class="filter-title">Стоимость в сутки (р):</legend>
                 <div class="price-controls">
-                  <label class="min-price" for="min-price">от <input id="min-price" type="text" name="min-price" value="0"></label>
-                  <label class="max-price" for="max-price">до <input id="max-price" type="text" name="max-price" value="3000"></label>
+                  <label class="min-price" for="min-price">от </label>
+                  <input id="min-price" type="text" name="min-price" value="0">
+                  <label class="max-price" for="max-price">до </label>
+                  <input id="max-price" type="text" name="max-price" value="3000">
                 </div>
                 <div class="range-controls">
                   <div class="scale">
@@ -76,7 +78,7 @@
         </div>
         <div class="sort-order">
           <button class="sort-order-button sort-order-ascend"><span class="visually-hidden">Сортировать по возрастанию</span></button>
-          <button class="sort-order-button sort-order-descend"><span class="visually-hidden">Сортировать по убыванию</span></button>
+          <button class="sort-order-button sort-order-descend sort-button-current"><span class="visually-hidden">Сортировать по убыванию</span></button>
         </div>
       </section>
 
@@ -87,53 +89,49 @@
           <li class="hotels-item">
             <img src="img/hotel-picture-1.jpg" width="135" height="90" alt="Фото Amara Resort & Spa">
             <div class="card-column-left">
-              <h3  class="hotels-title"><a href="#">Amara Resort &amp; Spa</a></h3>
-              <table class="type-of-housing">
+              <h3 class="hotels-title"><a href="#">Amara Resort &amp; Spa</a></h3>
+              <table class="type-of-house">
                 <tr>
                   <td>Гостиница</td>
                   <td>от 4000 р.</td>
                 </tr>
-                <tr>
-                  <td><a href="#" class="button-card detailed">Подробнее</a></td>
-                  <td><a href="#" class="button-card booking">Забронировать</a></td>
-                </tr>
               </table>
+              <a href="#" class="button-card detailed">Подробнее</a>
+              <a href="#" class="button-card booking">Забронировать</a>
             </div>
             <div class="card-column-right">
               <p class="rating">Рейтинг: 8,5</p>
               <ul class="stars">
-                <li><button class="star-button"></button></li>
-                <li><button class="star-button active-star"></button></li>
-                <li><button class="star-button active-star"></button></li>
-                <li><button class="star-button active-star"></button></li>
-                <li><button class="star-button active-star"></button></li>
+                <li><button class="star-button" tabindex="-1"></button></li>
+                <li><button class="star-button active-star" tabindex="-1"></button></li>
+                <li><button class="star-button active-star" tabindex="-1"></button></li>
+                <li><button class="star-button active-star" tabindex="-1"></button></li>
+                <li><button class="star-button active-star" tabindex="-1"></button></li>
               </ul>
             </div>
           </li>
 
           <li class="hotels-item">
-           <img src="img/hotel-picture-2.jpg" width="135" height="90" alt="Фото Desert Quail Inn">
-           <div class="card-column-left">
-            <h3 class="hotels-title"><a href="#">Desert Quail Inn</a></h3>
-              <table class="type-of-housing">
+            <img src="img/hotel-picture-2.jpg" width="135" height="90" alt="Фото Desert Quail Inn">
+            <div class="card-column-left">
+              <h3 class="hotels-title"><a href="#">Desert Quail Inn</a></h3>
+              <table class="type-of-house">
                 <tr>
                   <td>Мотель</td>
                   <td>от 3000 р.</td>
                 </tr>
-                <tr>
-                  <td><a href="#" class="button-card detailed">Подробнее</a></td>
-                  <td><a href="#" class="button-card booking">Забронировать</a></td>
-                </tr>
               </table>
+              <a href="#" class="button-card detailed">Подробнее</a>
+              <a href="#" class="button-card booking">Забронировать</a>
             </div>
             <div class="card-column-right">
               <p class="rating">Рейтинг: 8,9</p>
               <ul class="stars">
-                <li><button class="star-button"></button></li>
-                <li><button class="star-button"></button></li>
-                <li><button class="star-button active-star"></button></li>
-                <li><button class="star-button active-star"></button></li>
-                <li><button class="star-button active-star"></button></li>
+                <li><button class="star-button" tabindex="-1"></button></li>
+                <li><button class="star-button" tabindex="-1"></button></li>
+                <li><button class="star-button active-star" tabindex="-1"></button></li>
+                <li><button class="star-button active-star" tabindex="-1"></button></li>
+                <li><button class="star-button active-star" tabindex="-1"></button></li>
               </ul>
             </div>
           </li>
@@ -142,25 +140,23 @@
             <img src="img/hotel-picture-3.jpg" width="135" height="90" alt="Фото Villas at poco diablo">
             <div class="card-column-left">
               <h3 class="hotels-title"><a href="#">Villas at poco diablo</a></h3>
-              <table class="type-of-housing">
+              <table class="type-of-house">
                 <tr>
                   <td>Апартаменты</td>
                   <td>от 2000 р.</td>
                 </tr>
-                <tr>
-                  <td><a href="#" class="button-card detailed">Подробнее</a></td>
-                  <td><a href="#" class="button-card booking">Забронировать</a></td>
-                </tr>
               </table>
+              <a href="#" class="button-card detailed">Подробнее</a>
+              <a href="#" class="button-card booking">Забронировать</a>
             </div>
             <div class="card-column-right">
               <p class="rating">Рейтинг: 9,2</p>
               <ul class="stars">
-                <li><button class="star-button"></button></li>
-                <li><button class="star-button"></button></li>
-                <li><button class="star-button"></button></li>
-                <li><button class="star-button active-star"></button></li>
-                <li><button class="star-button active-star"></button></li>
+                <li><button class="star-button" tabindex="-1"></button></li>
+                <li><button class="star-button" tabindex="-1"></button></li>
+                <li><button class="star-button" tabindex="-1"></button></li>
+                <li><button class="star-button active-star" tabindex="-1"></button></li>
+                <li><button class="star-button active-star" tabindex="-1"></button></li>
               </ul>
             </div>
           </li>
@@ -171,7 +167,7 @@
 
   </main>
 
-  <footer class="main-footer">
+  <footer class="main-footer footer-inner-page">
       <p class="hashtag">
         <b>#VISITSEDONA</b>
       </p>
